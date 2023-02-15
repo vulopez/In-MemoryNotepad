@@ -29,7 +29,7 @@ const (
 )
 
 var (
-	arrLimit int // absolute cap(notepad)
+	arrLimit int
 	scanner  = bufio.NewScanner(os.Stdin)
 )
 
@@ -125,7 +125,6 @@ func main() {
 	_, _ = Scanf("%d\n", &arrLimit)
 
 	notepad := initNotepad()
-	// TODO: improve this break line
 	Println()
 mainLoop:
 	for {
@@ -154,7 +153,6 @@ mainLoop:
 			response = errCmd
 		}
 		Println(response)
-		// TODO: delete this break line
 		Println()
 	}
 	Printf(exitMsg)
